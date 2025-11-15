@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Green Network - Protect Earth</title>
+    <title>Ocean Guardians - For Healthy Seas</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        /* CSS 样式 - 重新调整为海洋主题配色 */
         * {
             margin: 0;
             padding: 0;
@@ -13,12 +14,13 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
+        /* 新的海洋配色方案 */
         :root {
-            --primary: #2e7d32;
-            --secondary: #4caf50;
-            --accent: #8bc34a;
-            --light: #e8f5e9;
-            --dark: #1b5e20;
+            --primary: #01579b;   /* 深海蓝 */
+            --secondary: #0288d1; /* 天空蓝 */
+            --accent: #00bcd4;    /* 鲜艳的青色/水鸭色 */
+            --light: #e0f7fa;     /* 极浅水色 */
+            --dark: #003a6c;      /* 极深蓝 */
             --text: #333333;
             --white: #ffffff;
         }
@@ -101,7 +103,8 @@
         }
 
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80');
+            /* 替换为海洋主题背景图 */
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1579737194883-9990e7939105?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
             background-size: cover;
             background-position: center;
             height: 80vh;
@@ -130,7 +133,7 @@
         .btn {
             display: inline-block;
             background-color: var(--accent);
-            color: var(--white);
+            color: var(--dark); /* 按钮颜色改为与背景色形成对比的深蓝 */
             padding: 0.8rem 2rem;
             border-radius: 50px;
             text-decoration: none;
@@ -142,7 +145,8 @@
         }
 
         .btn:hover {
-            background-color: var(--primary);
+            background-color: var(--secondary);
+            color: var(--white);
             transform: translateY(-3px);
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
         }
@@ -266,12 +270,13 @@
             background-color: var(--light);
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
         }
 
         .initiative-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
         }
 
         .initiative-img {
@@ -283,6 +288,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            display: block;
             transition: transform 0.5s ease;
         }
 
@@ -292,46 +298,48 @@
 
         .initiative-content {
             padding: 1.5rem;
+            text-align: center;
+        }
+
+        .initiative-content i {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 0.8rem;
         }
 
         .initiative-content h3 {
             font-size: 1.5rem;
+            color: var(--primary);
             margin-bottom: 1rem;
-            color: var(--dark);
         }
 
         .initiative-content p {
+            font-size: 0.95rem;
+            color: var(--text);
             margin-bottom: 1.5rem;
         }
 
-        .cta {
-            background: linear-gradient(to right, var(--primary), var(--secondary));
-            color: var(--white);
+        .support {
             text-align: center;
-            padding: 5rem 0;
+            background: linear-gradient(rgba(1, 87, 155, 0.9), rgba(2, 136, 209, 0.8)), url('https://images.unsplash.com/photo-1547826039-bfc39e0d163f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 6rem 0;
         }
 
-        .cta h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
+        .support h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
         }
 
-        .cta p {
+        .support p {
             font-size: 1.2rem;
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
-        }
-
-        .cta .btn {
-            background-color: var(--white);
-            color: var(--primary);
-        }
-
-        .cta .btn:hover {
-            background-color: var(--accent);
-            color: var(--white);
         }
 
         footer {
@@ -347,37 +355,38 @@
             margin-bottom: 2rem;
         }
 
-        .footer-column h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1.5rem;
-            position: relative;
-            padding-bottom: 10px;
+        .footer-logo h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
         }
 
-        .footer-column h3::after {
+        .footer-column h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .footer-column h4::after {
             content: '';
             position: absolute;
-            bottom: 0;
+            bottom: -5px;
             left: 0;
             width: 40px;
             height: 2px;
             background-color: var(--accent);
         }
 
-        .footer-column p {
-            margin-bottom: 1rem;
-        }
-
-        .footer-links {
+        .footer-column ul {
             list-style: none;
         }
 
         .footer-links li {
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.5rem;
         }
 
         .footer-links li a {
-            color: var(--light);
+            color: var(--white);
             text-decoration: none;
             transition: all 0.3s ease;
         }
@@ -390,6 +399,7 @@
         .social-links {
             display: flex;
             gap: 1rem;
+            margin-top: 1rem;
         }
 
         .social-links a {
@@ -422,19 +432,17 @@
             cursor: pointer;
         }
 
+        /* 响应式设计 */
         @media (max-width: 992px) {
             .about-content {
                 grid-template-columns: 1fr;
             }
-            
             .initiatives-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
-            
             .footer-content {
                 grid-template-columns: repeat(2, 1fr);
             }
-            
             .stats {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -444,11 +452,9 @@
             .hero h1 {
                 font-size: 2.5rem;
             }
-            
             .hero p {
                 font-size: 1.1rem;
             }
-            
             nav ul {
                 display: none;
                 position: absolute;
@@ -461,232 +467,229 @@
                 text-align: center;
                 box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
             }
-            
             nav ul.active {
                 display: flex;
             }
-            
             nav ul li {
                 margin: 0;
                 padding: 0.8rem 0;
             }
-            
             .mobile-menu {
                 display: block;
             }
-            
             .initiatives-grid {
                 grid-template-columns: 1fr;
             }
-            
             .footer-content {
                 grid-template-columns: 1fr;
             }
-            
             .stats {
                 grid-template-columns: 1fr;
             }
         }
 
-        /* Animation for stats counter */
+        /* 动画 */
         .counter {
             transition: all 0.5s ease;
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <div class="container nav-container">
             <div class="logo">
-                <i class="fas fa-seedling"></i>
-                <span>Green Network</span>
+                <i class="fas fa-water"></i>
+                <span>Ocean Guardians</span>
             </div>
             <nav>
-                <div class="mobile-menu">
-                    <i class="fas fa-bars"></i>
-                </div>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#initiatives">Initiatives</a></li>
-                    <li><a href="#get-involved">Get Involved</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#hero">首页</a></li>
+                    <li><a href="#about">关于我们</a></li>
+                    <li><a href="#initiatives">核心项目</a></li>
+                    <li><a href="#support">加入我们</a></li>
+                    <li><a href="#contact">联系我们</a></li>
                 </ul>
             </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container hero-content">
-            <h1>Protect Our Planet, Preserve Our Future</h1>
-            <p>Join the global movement to create a sustainable world through conservation, education, and community action.</p>
-            <a href="#get-involved" class="btn">Join Our Network</a>
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>守护蓝色星球，从海洋开始</h1>
+                <p>我们致力于保护全球海洋生态系统，应对塑料污染和气候变化带来的威胁，确保海洋健康与生命繁荣。</p>
+                <a href="#support" class="btn">立即行动，贡献一份力量</a>
+            </div>
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about">
         <div class="container">
             <div class="section-title">
-                <h2>About Green Network</h2>
-                <p>We are a global community dedicated to environmental protection and sustainable development.</p>
+                <h2>我们的使命：保护海洋生命线</h2>
+                <p>我们结合前沿科学研究、社区行动和全球倡议，为子孙后代确保一个健康的海洋环境。</p>
             </div>
             <div class="about-content">
                 <div class="about-img">
-                    <img src="https://images.unsplash.com/photo-1507591064344-4c6ce005b128?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Team planting trees">
+                    <img src="https://images.unsplash.com/photo-1542382103350-b5860368c5ef?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Sea Turtle">
                 </div>
                 <div class="about-text">
-                    <h3>Our Mission</h3>
-                    <p>Green Network is committed to creating a sustainable future by protecting natural ecosystems, promoting renewable energy, and empowering communities to take environmental action.</p>
-                    <p>Founded in 2010, we've grown from a small grassroots organization to an international network with over 50,000 members across 120 countries.</p>
-                    <p>Our approach combines scientific research, community engagement, and policy advocacy to address the most pressing environmental challenges of our time.</p>
-                    <a href="#" class="btn">Learn More</a>
+                    <h3>挑战与愿景</h3>
+                    <p>海洋覆盖了地球表面的70%以上，是地球生命的支柱。然而，过度捕捞、塑料污染和气候变暖正使我们的海洋生物和珊瑚礁面临前所未有的危机。我们相信通过集体行动和创新解决方案，可以扭转这一趋势。</p>
+                    <p>我们与渔民、科学家、政府和当地社区合作，创建和管理海洋保护区，推动可持续渔业政策，并教育下一代海洋守护者。</p>
+                    <a href="#initiatives" class="btn">了解我们的项目</a>
                 </div>
             </div>
+            
             <div class="stats">
                 <div class="stat-item">
-                    <i class="fas fa-tree"></i>
-                    <h3 class="counter" data-target="2500000">0</h3>
-                    <p>Trees Planted</p>
+                    <i class="fas fa-fish-fins"></i>
+                    <h3 class="counter" data-target="35">0</h3>
+                    <p>新增海洋保护区 (个)</p>
                 </div>
                 <div class="stat-item">
-                    <i class="fas fa-users"></i>
-                    <h3 class="counter" data-target="50000">0</h3>
-                    <p>Active Members</p>
+                    <i class="fas fa-ship"></i>
+                    <h3 class="counter" data-target="200">0</h3>
+                    <p>海洋塑料清除量 (吨)</p>
                 </div>
                 <div class="stat-item">
-                    <i class="fas fa-globe-americas"></i>
-                    <h3 class="counter" data-target="120">0</h3>
-                    <p>Countries Reached</p>
+                    <i class="fas fa-circle-nodes"></i>
+                    <h3 class="counter" data-target="15000">0</h3>
+                    <p>珊瑚礁恢复面积 (m²)</p>
                 </div>
                 <div class="stat-item">
-                    <i class="fas fa-recycle"></i>
-                    <h3 class="counter" data-target="1500">0</h3>
-                    <p>Cleanup Projects</p>
+                    <i class="fas fa-paw"></i>
+                    <h3 class="counter" data-target="500">0</h3>
+                    <p>海洋生物救援行动 (次)</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Initiatives Section -->
     <section class="initiatives" id="initiatives">
         <div class="container">
             <div class="section-title">
-                <h2>Our Initiatives</h2>
-                <p>Discover the key programs and projects we're implementing to protect our planet.</p>
+                <h2>核心项目</h2>
+                <p>探索我们正在全球范围内实施的关键项目和解决方案。</p>
             </div>
             <div class="initiatives-grid">
                 <div class="initiative-card">
                     <div class="initiative-img">
-                        <img src="https://dialogue.earth/content/uploads/2021/04/lessons-from-the-rush-to-reforest-china-dialogue-2400x1599.jpg" alt="Reforestation">
+                        <img src="https://images.unsplash.com/photo-1598205479047-975317781b0f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Plastic Cleanup">
                     </div>
                     <div class="initiative-content">
-                        <h3>Global Reforestation</h3>
-                        <p>Planting millions of trees worldwide to restore ecosystems, combat climate change, and protect biodiversity.</p>
-                        <a href="#" class="btn">Learn More</a>
+                        <i class="fas fa-trash-can"></i>
+                        <h3>全球海滩与洋面清理</h3>
+                        <p>组织志愿者和专业团队，在污染最严重的区域进行大规模清理，阻止塑料微粒进入食物链。</p>
+                        <a href="#" class="btn btn-small">了解详情</a>
                     </div>
                 </div>
+
                 <div class="initiative-card">
                     <div class="initiative-img">
-                        <img src="https://images.unsplash.com/photo-1621451537084-482c73073a0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Ocean Conservation">
+                        <img src="https://images.unsplash.com/photo-1517726487968-d01d14e0f435?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Coral Restoration">
                     </div>
                     <div class="initiative-content">
-                        <h3>Ocean Conservation</h3>
-                        <p>Protecting marine ecosystems, reducing plastic pollution, and promoting sustainable fishing practices.</p>
-                        <a href="#" class="btn">Learn More</a>
+                        <i class="fas fa-flask"></i>
+                        <h3>蓝色珊瑚家园计划</h3>
+                        <p>利用水下苗圃和科学移植技术，帮助恢复和重建因气候变化而白化的濒危珊瑚礁生态系统。</p>
+                        <a href="#" class="btn btn-small">了解详情</a>
                     </div>
                 </div>
+
                 <div class="initiative-card">
                     <div class="initiative-img">
-                        <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80" alt="Renewable Energy">
+                        <img src="https://images.unsplash.com/photo-1558296765-a864d4d62b3a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Marine Research">
                     </div>
                     <div class="initiative-content">
-                        <h3>Renewable Energy</h3>
-                        <p>Promoting solar, wind, and other clean energy sources to reduce dependence on fossil fuels.</p>
-                        <a href="#" class="btn">Learn More</a>
+                        <i class="fas fa-microscope"></i>
+                        <h3>深海生态系统研究</h3>
+                        <p>资助和开展关于深海生物多样性、酸化影响和可持续渔业模式的前沿海洋科学研究。</p>
+                        <a href="#" class="btn btn-small">了解详情</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta" id="get-involved">
+    <section class="support" id="support">
         <div class="container">
-            <h2>Join Our Global Movement</h2>
-            <p>Together, we can create a sustainable future for generations to come. Every action counts, no matter how small.</p>
-            <a href="#" class="btn">Become a Member</a>
+            <h2>你的行动，就是海洋的希望</h2>
+            <p>无论是捐款、成为志愿者还是分享我们的故事，您的每一步支持都直接转化为对海洋的保护行动。</p>
+            <a href="#" class="btn">立即捐助</a>
+            <a href="#" class="btn" style="background-color: var(--primary); margin-left: 1rem;">成为志愿者</a>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer id="contact">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-column">
-                    <h3>Green Network</h3>
-                    <p>We are dedicated to protecting our planet through collaborative action, education, and sustainable solutions.</p>
+                <div class="footer-logo">
+                    <h3>Ocean Guardians</h3>
+                    <p>致力于海洋保护，确保人类与自然和谐共存的未来。</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div class="footer-column">
-                    <h3>Quick Links</h3>
+                    <h4>快速链接</h4>
                     <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#initiatives">Initiatives</a></li>
-                        <li><a href="#get-involved">Get Involved</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#about">我们的故事</a></li>
+                        <li><a href="#initiatives">所有项目</a></li>
+                        <li><a href="#">新闻与报告</a></li>
+                        <li><a href="#">常见问题</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>Our Programs</h3>
+                    <h4>参与其中</h4>
                     <ul class="footer-links">
-                        <li><a href="#">Reforestation</a></li>
-                        <li><a href="#">Ocean Cleanup</a></li>
-                        <li><a href="#">Wildlife Protection</a></li>
-                        <li><a href="#">Climate Education</a></li>
-                        <li><a href="#">Sustainable Agriculture</a></li>
+                        <li><a href="#">发起捐赠</a></li>
+                        <li><a href="#">志愿者招募</a></li>
+                        <li><a href="#">企业合作</a></li>
+                        <li><a href="#">政策倡导</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>Contact Us</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Copper Creek Drive, New York</p>
-                    <p><i class="fas fa-phone"></i> +1 (312) 171-0771</p>
-                    <p><i class="fas fa-envelope"></i> support@greennetwork.org</p>
+                    <h4>联系我们</h4>
+                    <p>地址: 海洋保护大道 100 号</p>
+                    <p>电话: +86 123 4567 890</p>
+                    <p>邮箱: info@oceanguardians.org</p>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 Green Network. All rights reserved.</p>
+                <p>&copy; 2025 Ocean Guardians. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Mobile Menu Toggle
+        // 手机菜单切换
         document.querySelector('.mobile-menu').addEventListener('click', function() {
             document.querySelector('nav ul').classList.toggle('active');
         });
 
-        // Counter Animation
+        // 计数器动画
         function animateCounters() {
             const counters = document.querySelectorAll('.counter');
-            const speed = 200; // The lower the slower
-            
+            const speed = 200; // 越低越慢
+
             counters.forEach(counter => {
                 const target = +counter.getAttribute('data-target');
                 const count = +counter.innerText;
-                
+
+                // 计算每次递增的值，确保在大约 200 次迭代中达到目标
                 const inc = target / speed;
-                
+
                 if(count < target) {
+                    // 使用 Math.ceil 确保计数器递增
                     counter.innerText = Math.ceil(count + inc);
+                    // 使用 requestAnimationFrame 或 setTimeout 保证平滑过渡
+                    // 这里保持原有的 setTimeout 结构
                     setTimeout(animateCounters, 1);
                 } else {
                     counter.innerText = target;
@@ -694,24 +697,28 @@
             });
         }
 
-        // Initialize counters when page loads
+        // 页面加载时初始化计数器
+        // 注意：这种简单的 setTimeout 递归方法会一次性触发所有计数器，
+        // 实际应用中建议使用 Intersection Observer API 优化
         window.addEventListener('load', animateCounters);
 
-        // Smooth scrolling for navigation links
+        // 导航链接平滑滚动
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
-                
+
                 const targetId = this.getAttribute('href');
                 if(targetId === '#') return;
-                
+
                 const targetElement = document.querySelector(targetId);
                 if(targetElement) {
+                    // 滚动到目标元素，-80 是为了避开 Sticky Header
                     window.scrollTo({
                         top: targetElement.offsetTop - 80,
                         behavior: 'smooth'
                     });
-                    
+
+                    // 在移动端点击后关闭菜单
                     document.querySelector('nav ul').classList.remove('active');
                 }
             });
